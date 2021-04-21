@@ -47,11 +47,11 @@
             this.rdoQuinientos = new System.Windows.Forms.RadioButton();
             this.btnNomina = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgNomina = new System.Windows.Forms.DataGridView();
             this.btnCargar = new System.Windows.Forms.Button();
             this.chkAuxilio = new System.Windows.Forms.CheckBox();
             this.grbTotalvendido.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgNomina)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -158,6 +158,8 @@
             // chkComision
             // 
             this.chkComision.AutoSize = true;
+            this.chkComision.Checked = true;
+            this.chkComision.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkComision.Location = new System.Drawing.Point(48, 250);
             this.chkComision.Name = "chkComision";
             this.chkComision.Size = new System.Drawing.Size(68, 17);
@@ -165,11 +167,12 @@
             this.chkComision.Text = "Comision";
             this.chkComision.UseVisualStyleBackColor = true;
             this.chkComision.UseWaitCursor = true;
+            this.chkComision.CheckedChanged += new System.EventHandler(this.chkComision_CheckedChanged);
             // 
             // cmbCargo
             // 
             this.cmbCargo.FormattingEnabled = true;
-            this.cmbCargo.Location = new System.Drawing.Point(340, 78);
+            this.cmbCargo.Location = new System.Drawing.Point(340, 70);
             this.cmbCargo.Name = "cmbCargo";
             this.cmbCargo.Size = new System.Drawing.Size(121, 21);
             this.cmbCargo.TabIndex = 16;
@@ -244,15 +247,16 @@
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.UseWaitCursor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // dataGridView1
+            // dtgNomina
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(505, 30);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 20;
-            this.dataGridView1.UseWaitCursor = true;
+            this.dtgNomina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgNomina.Location = new System.Drawing.Point(504, 30);
+            this.dtgNomina.Name = "dtgNomina";
+            this.dtgNomina.Size = new System.Drawing.Size(303, 123);
+            this.dtgNomina.TabIndex = 20;
+            this.dtgNomina.UseWaitCursor = true;
             // 
             // btnCargar
             // 
@@ -263,11 +267,12 @@
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
             this.btnCargar.UseWaitCursor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // chkAuxilio
             // 
             this.chkAuxilio.AutoSize = true;
-            this.chkAuxilio.Location = new System.Drawing.Point(48, 198);
+            this.chkAuxilio.Location = new System.Drawing.Point(45, 200);
             this.chkAuxilio.Name = "chkAuxilio";
             this.chkAuxilio.Size = new System.Drawing.Size(115, 17);
             this.chkAuxilio.TabIndex = 22;
@@ -279,10 +284,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(819, 472);
             this.Controls.Add(this.chkAuxilio);
             this.Controls.Add(this.btnCargar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgNomina);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnNomina);
             this.Controls.Add(this.grbTotalvendido);
@@ -306,7 +311,7 @@
             this.Load += new System.EventHandler(this.frmNomina_Load);
             this.grbTotalvendido.ResumeLayout(false);
             this.grbTotalvendido.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgNomina)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,7 +338,7 @@
         private System.Windows.Forms.RadioButton rdoQuinientos;
         private System.Windows.Forms.Button btnNomina;
         private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgNomina;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.CheckBox chkAuxilio;
     }
