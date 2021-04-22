@@ -10,48 +10,71 @@ using System.Windows.Forms;
 
 namespace wNomina1
 {
+
+    /// <summary>
+    /// Autores: Juan Diego Céspedes, Alen Yair Camargo, Mauricio Gómez Restrepo
+    /// Fecha: 22/04/2021
+    /// Descripción: Formulario nómina, carga de archivos .CSV
+    /// </summary>
+
     public partial class frmMenuPrincipal : Form
     {
-        private  frmNomina Forma;
+
+        //Formulario hijo con las propiedades de la clase Nómina
+        private  frmNomina formaNomina;
+
+        //Inicializador del formulario
 
         public frmMenuPrincipal()
         {
             InitializeComponent();
         }
 
+        //Opción de salir en el Menu Strip
+
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (Forma == null)
+
+            //Condicional que se encarga de inicializar un formulario en caso de que se requiera
+            try
             {
-                Forma = new frmNomina();
-                Forma.FormClosed += new FormClosedEventHandler(Cerrarforma);
-                Forma.Show();
-                this.Hide();
+
+                if (formaNomina == null)
+                {
+
+                    formaNomina = new frmNomina();
+                    formaNomina.FormClosed += new FormClosedEventHandler(Cerrarforma);
+                    formaNomina.Show();
+                    this.Hide();
+
+                }
+                else
+                {
+                    formaNomina.Activate();
+                }
 
             }
-            else 
+            catch (Exception err)
             {
-                Forma.Activate();
+                MessageBox.Show(err.Message);
             }
         }
 
-
+        //Método que vacía la forma en caso de que se requiera
 
         void Cerrarforma(object sender, FormClosedEventArgs e)
         {
-            Forma = null;        
+            formaNomina = null;        
         }
 
+        //Método que cierra el formulario
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        public void reabrirFormulario()
-        {
-            this.Show();
-        }
+        //Mensaje de confirmación en caso de que se desee cerrar
 
         private void frmMenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -60,6 +83,7 @@ namespace wNomina1
 
             if (resultado == DialogResult.OK)
             {
+                this.Close();
                 Application.Exit();
             }
 

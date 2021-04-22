@@ -49,7 +49,7 @@
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.dtgNomina = new System.Windows.Forms.DataGridView();
             this.btnCargar = new System.Windows.Forms.Button();
-            this.chkAuxilio = new System.Windows.Forms.CheckBox();
+            this.chkAuxilioTransporte = new System.Windows.Forms.CheckBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -250,15 +250,15 @@
             this.btnCargar.UseVisualStyleBackColor = true;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
-            // chkAuxilio
+            // chkAuxilioTransporte
             // 
-            this.chkAuxilio.AutoSize = true;
-            this.chkAuxilio.Location = new System.Drawing.Point(45, 252);
-            this.chkAuxilio.Name = "chkAuxilio";
-            this.chkAuxilio.Size = new System.Drawing.Size(115, 17);
-            this.chkAuxilio.TabIndex = 22;
-            this.chkAuxilio.Text = "Auxilio de trasporte";
-            this.chkAuxilio.UseVisualStyleBackColor = true;
+            this.chkAuxilioTransporte.AutoSize = true;
+            this.chkAuxilioTransporte.Location = new System.Drawing.Point(45, 252);
+            this.chkAuxilioTransporte.Name = "chkAuxilioTransporte";
+            this.chkAuxilioTransporte.Size = new System.Drawing.Size(115, 17);
+            this.chkAuxilioTransporte.TabIndex = 22;
+            this.chkAuxilioTransporte.Text = "Auxilio de trasporte";
+            this.chkAuxilioTransporte.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
             // 
@@ -291,7 +291,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1099, 546);
             this.ControlBox = false;
-            this.Controls.Add(this.chkAuxilio);
+            this.Controls.Add(this.chkAuxilioTransporte);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.dtgNomina);
             this.Controls.Add(this.btnLimpiar);
@@ -350,7 +350,7 @@
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.DataGridView dtgNomina;
         private System.Windows.Forms.Button btnCargar;
-        private System.Windows.Forms.CheckBox chkAuxilio;
+        private System.Windows.Forms.CheckBox chkAuxilioTransporte;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarToolStripMenuItem;

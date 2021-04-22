@@ -14,104 +14,122 @@ namespace wNomina1
     public partial class frmNomina : Form
     {
 
+        //Definición de objetos y variables
+
         private frmMenuPrincipal menuPrincipal;
         private Stream myStream;
         int counter = 0;
         string linea;
 
+        //Condiciones iniciales del programa
+
         public frmNomina()
         {
-            InitializeComponent();
-            
-
+            InitializeComponent();            
         }
+
+        //Botón que calcula y envía por medio de un mbox los resultados de los datos ingresados
 
         private void btnNomina_Click(object sender, EventArgs e)
         {
             try
             {
 
-                double Salariobasico = double.Parse(txtSalario.Text);
-                double Extra = double.Parse(txtExtra.Text);
-                double Nomina = 0;
-                double Comision = 0;
-                double Salud = 0;
-                double Pension = 0;
-                double Auxilio = 0;
+                #region [Definición de variables]
+
+                double salarioBasico = double.Parse(txtSalario.Text);
+                double extra = double.Parse(txtExtra.Text);
+                double nomina = 0;
+                double comision = 0;
+                double salud = 0;
+                double pension = 0;
+                double auxilioTransporte = 0;
                 double ibc = 0;
                 double fondoSolidaridad = 0;
                 double descuentos;
-                
 
-                if (chkAuxilio.Checked == true)
+                #endregion
+
+                //Condicional que agrega el valor
+
+                if (chkAuxilioTransporte.Checked == true)
                 {
-                    Auxilio += 106454;
+                    auxilioTransporte += 106454;
                 }
                 else
                 {
-                    Auxilio = 0;
+                    auxilioTransporte = 0;
                 }
 
+                //Suma de valores fijos a la nómina
+
+                nomina = nomina + (salarioBasico + extra + auxilioTransporte);
 
 
-                Nomina = Nomina + (Salariobasico + Extra + Auxilio);
-
-
+                //Condicional que opera en caso de que se le agregue una comisión al valor de la nómina
 
                 if (chkComision.Checked == true)
                 {
 
                     if (rdoQuinientos.Checked == true)
                     {
-                        Comision = 500000;
+                        comision = 500000;
 
                     }
                     else if (rdoOchocientoss.Checked == true)
                     {
-                        Comision = 800000;
+                        comision = 800000;
                     }
                     else if (rdoMillon.Checked == true)
                     {
-                        Comision = 1000000;
+                        comision = 1000000;
                     }
                     else
                     {
-                        Comision = 0;
+                        comision = 0;
                     }
 
-                    Nomina += Comision;
+                    nomina += comision;
 
                 }
 
-                Salud = (Nomina * 4) / 100;
-                Pension = Nomina * 0.04;
-                descuentos = Salud + Pension;
+                //Operación que descuenta los valores de descuento de la pensión y la salud
 
-                if (Salariobasico >= 3608000)
+                salud = (nomina * 4) / 100;
+                pension = nomina * 0.04;
+                descuentos = salud + pension;
+
+                //Mensajes de salida dependiendo del ingreso del empleado
+
+                if (salarioBasico >= 3608000)
                 {
+                    
+                    //Descuento adicional en caso de que se gane más de cuatro salarios mínimos
 
-                    ibc = ((Nomina * 40) / 100);
+                    ibc = ((nomina * 40) / 100);
                     fondoSolidaridad = ((ibc * 1) / 100);
                     descuentos += fondoSolidaridad;
-                    Nomina = Nomina - descuentos;
+                    nomina = nomina - descuentos;
 
                     MessageBox.Show("Nombre:\t$" + txtNombre.Text + "\n" + "Apellido:\t$" + txtApellido.Text + "\n" +
-"Documento:\t$" + txtDocumento.Text + "\n" + "Cargo:\t" + cmbCargo.Text + "\nSalario Básico:\t$" + Salariobasico +
-"\n" + "Comision:\t$" + Comision + "\nExtra:\t$" + Extra + "\nDescuentos:\t$-" + descuentos
-+ "\n" + "Axilio de trasporte:\t$" + Auxilio + "\n" + "Salud:\t$-" + Salud + "\n" + "Pension:\t$-"
-+ Pension + "\nFondo Solidaridad:\t$-" + fondoSolidaridad + "\n" + "Valor a pagar:\t$" + Nomina);
+                    "Documento:\t$" + txtDocumento.Text + "\n" + "Cargo:\t" + cmbCargo.Text + "\nSalario Básico:\t$" + salarioBasico +
+                    "\n" + "Comision:\t$" + comision + "\nExtra:\t$" + extra + "\nDescuentos:\t$-" + descuentos
+                    + "\n" + "Axilio de trasporte:\t$" + auxilioTransporte + "\n" + "Salud:\t$-" + salud + "\n" + "Pension:\t$-"
+                    + pension + "\nFondo Solidaridad:\t$-" + fondoSolidaridad + "\n" + "Valor a pagar:\t$" + nomina);
 
                 }
                 else
                 {
 
-                    Nomina = Nomina - descuentos;
+                    //En caso de que no, se imprime este
+
+                    nomina = nomina - descuentos;
 
                     MessageBox.Show("Nombre:\t$" + txtNombre.Text + "\n" + "Apellido:\t$" + txtApellido.Text + "\n" +
-    "Documento:\t$" + txtDocumento.Text + "\n" + "Cargo:\t" + cmbCargo.Text + "\nSalario Básico:\t$" + Salariobasico +  
-    "\n" + "Comision:\t$" + Comision + "\nExtra:\t$" + Extra + "\nDescuentos:\t$-" + descuentos
-    + "\n" + "Axilio de trasporte:\t$" + Auxilio + "\n" + "Salud:\t$-" + Salud + "\n" + "Pension:\t$-"
-    + Pension + "\n" + "Valor a pagar:\t$" + Nomina);
+                    "Documento:\t$" + txtDocumento.Text + "\n" + "Cargo:\t" + cmbCargo.Text + "\nSalario Básico:\t$" + salarioBasico +  
+                    "\n" + "Comision:\t$" + comision + "\nExtra:\t$" + extra + "\nDescuentos:\t$-" + descuentos
+                    + "\n" + "Axilio de trasporte:\t$" + auxilioTransporte + "\n" + "Salud:\t$-" + salud + "\n" + "Pension:\t$-"
+                    + pension + "\n" + "Valor a pagar:\t$" + nomina);
 
                 }
 
@@ -125,20 +143,26 @@ namespace wNomina1
 
         }
 
+        //Carga de formulario que llena las variables y datos iniciales del mismo
+
         private void frmNomina_Load(object sender, EventArgs e)
         {
             try
             {
                 #region[llenar combo cargo]
+
+                //Llenado de combobox del cargo que desempeña
+
                 cmbCargo.Items.Clear();
                 cmbCargo.Items.Add("Secretaria");
-                cmbCargo.Items.Add("Conserge");
+                cmbCargo.Items.Add("Conserje");
                 cmbCargo.Items.Add("Director ejecutivo");
-                cmbCargo.Items.Add("Visepresidente");
+                cmbCargo.Items.Add("Vicepresidente");
+                
                 #endregion
 
-                chkAuxilio.Visible = false;
-                chkAuxilio.Enabled = false;
+                chkAuxilioTransporte.Visible = false;
+                chkAuxilioTransporte.Enabled = false;
 
                 chkComision_CheckedChanged(sender, e);
 
@@ -151,6 +175,8 @@ namespace wNomina1
 
 
         }
+
+        //Método que activa o desactiva la checkbox del auxilio de transporte en caso de que el salario cumpla ciertas condiciones
 
         private void txtSalario_TextChanged(object sender, EventArgs e)
         {
@@ -165,24 +191,24 @@ namespace wNomina1
 
                 if (Salariobasico <= 902000 && Salariobasico > 0)
                 {
-                    chkAuxilio.Visible = true;
-                    chkAuxilio.Enabled = true;
+                    chkAuxilioTransporte.Visible = true;
+                    chkAuxilioTransporte.Enabled = true;
 
                 }
                 else
                 {
-                    chkAuxilio.Checked = false;
-                    chkAuxilio.Visible = false;
-                    chkAuxilio.Enabled = false;
+                    chkAuxilioTransporte.Checked = false;
+                    chkAuxilioTransporte.Visible = false;
+                    chkAuxilioTransporte.Enabled = false;
                 }
 
             }
 
             catch
             {
-                chkAuxilio.Checked = false;
-                chkAuxilio.Visible = false;
-                chkAuxilio.Enabled = false;
+                chkAuxilioTransporte.Checked = false;
+                chkAuxilioTransporte.Visible = false;
+                chkAuxilioTransporte.Enabled = false;
                 Salariobasico = 0;
                 txtSalario.Text = "";
 
@@ -190,7 +216,7 @@ namespace wNomina1
             }
         }
 
-
+        //CheckBox que activa o desactiva radiobuttons en caso de que se seleccione o no
 
         private void chkComision_CheckedChanged(object sender, EventArgs e)
         {
@@ -214,6 +240,8 @@ namespace wNomina1
 
         }
 
+        //Botón que limpia todos los datos del formulario cuando esto se requiera
+
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             try
@@ -225,10 +253,10 @@ namespace wNomina1
                 txtExtra.Clear();
                 txtSalario.Clear();
                 cmbCargo.Text = "";
-                chkAuxilio.Checked = false;
+                chkAuxilioTransporte.Checked = false;
                 chkComision.Checked = false;
-                chkAuxilio.Visible = false;
-                chkAuxilio.Enabled = true;
+                chkAuxilioTransporte.Visible = false;
+                chkAuxilioTransporte.Enabled = true;
                 dtgNomina.Rows.Clear();
                 dtgNomina.Columns.Clear();
 
@@ -241,13 +269,19 @@ namespace wNomina1
             }
         }
 
+        //Botón que carga los datos del archivo .CSV 
+
         private void btnCargar_Click(object sender, EventArgs e)
         {
 
             #region [Columnas DataGridView]
 
+            //Limpiado de DataGridView en caso de que se vaya a cargar un archivo nuevo
+
             dtgNomina.Rows.Clear();
             dtgNomina.Columns.Clear();
+
+            //Llenado de columnas con sus propiedades
 
             DataGridViewTextBoxColumn col1 = new DataGridViewTextBoxColumn();
             col1.HeaderText = "Nombre";
@@ -299,9 +333,12 @@ namespace wNomina1
 
             #endregion
 
+            //Definición de variables
 
             char delimitador = ';';
             String[] valores;
+
+            //Carga de archivo .CSV desde el directorio de Windows
 
             OpenFileDialog cargarArchivo = new OpenFileDialog();
             cargarArchivo.InitialDirectory = Application.StartupPath;
@@ -309,12 +346,18 @@ namespace wNomina1
 
             try
             {
+
+                //Condicional que verifica si se seleccionó un archivo
                 
                 if (cargarArchivo.ShowDialog() == DialogResult.OK)
                 {
 
+                    //Condicional que verifica si el archivo no está vacío
+
                     if ((myStream = cargarArchivo.OpenFile()) != null)
                     {
+
+                        //Procedimiento que lee los datos del archivo y los carga a las filas del dtg
 
                         StreamReader archivo = new StreamReader(cargarArchivo.FileName);
 
@@ -333,14 +376,9 @@ namespace wNomina1
                             {
                                 counter++;
                             }
-
                         }
-
                     }
-
-
                 }
-
             }
             catch (Exception err)
             {
@@ -348,13 +386,15 @@ namespace wNomina1
                 MessageBox.Show(err.Message);
 
             }
-
-
-
         }
+
+        //Opción de MenuStrip de cerrado de formulario
 
         private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+            //En caso de que se cierre, instancia el formulario principal y lo vuelve a mostrar
+
             if (menuPrincipal == null)
             {
                 menuPrincipal = new frmMenuPrincipal();
@@ -370,15 +410,19 @@ namespace wNomina1
             this.Close();
         }
 
+        //Método que limpia las propiedades del objeto
+
         void Cerrarforma(object sender, FormClosedEventArgs e)
         {
             menuPrincipal = null;
         }
 
+        //Mensaje de salida, confirmación de cerrado de formulario
+
         private void frmMenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult resultado = MessageBox.Show(" Realmente desea salir?", " Comfirmacion ",
-MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             e.Cancel = (resultado == DialogResult.No);
         }
     }
