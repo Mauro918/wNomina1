@@ -16,7 +16,6 @@ namespace wNomina1
 
         //Definición de objetos y variables
 
-        private frmMenuPrincipal menuPrincipal;
         private Stream myStream;
         int counter = 0;
         string linea;
@@ -366,6 +365,7 @@ namespace wNomina1
 
                             if (counter >= 1)
                             {
+
                                 valores = linea.Split(delimitador);
 
                                 dtgNomina.Rows.Add(valores.ToArray());
@@ -377,6 +377,7 @@ namespace wNomina1
                                 counter++;
                             }
                         }
+                        archivo.Close();
                     }
                 }
             }
@@ -393,28 +394,9 @@ namespace wNomina1
         private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            //En caso de que se cierre, instancia el formulario principal y lo vuelve a mostrar
-
-            if (menuPrincipal == null)
-            {
-                menuPrincipal = new frmMenuPrincipal();
-                menuPrincipal.FormClosed += new FormClosedEventHandler(Cerrarforma);
-                menuPrincipal.Show();
-
-            }
-            else
-            {
-                menuPrincipal.Activate();
-            }
-
+            //Cerrado de formulario secundario
             this.Close();
-        }
 
-        //Método que limpia las propiedades del objeto
-
-        void Cerrarforma(object sender, FormClosedEventArgs e)
-        {
-            menuPrincipal = null;
         }
 
         //Mensaje de salida, confirmación de cerrado de formulario

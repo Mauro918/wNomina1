@@ -45,7 +45,6 @@ namespace wNomina1
                     formaNomina = new frmNomina();
                     formaNomina.FormClosed += new FormClosedEventHandler(Cerrarforma);
                     formaNomina.Show();
-                    this.Hide();
 
                 }
                 else

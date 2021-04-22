@@ -151,7 +151,7 @@
             // chkComision
             // 
             this.chkComision.AutoSize = true;
-            this.chkComision.Location = new System.Drawing.Point(45, 340);
+            this.chkComision.Location = new System.Drawing.Point(40, 311);
             this.chkComision.Name = "chkComision";
             this.chkComision.Size = new System.Drawing.Size(68, 17);
             this.chkComision.TabIndex = 15;
@@ -172,7 +172,7 @@
             this.grbTotalvendido.Controls.Add(this.rdoMillon);
             this.grbTotalvendido.Controls.Add(this.rdoOchocientoss);
             this.grbTotalvendido.Controls.Add(this.rdoQuinientos);
-            this.grbTotalvendido.Location = new System.Drawing.Point(211, 340);
+            this.grbTotalvendido.Location = new System.Drawing.Point(206, 311);
             this.grbTotalvendido.Name = "grbTotalvendido";
             this.grbTotalvendido.Size = new System.Drawing.Size(239, 134);
             this.grbTotalvendido.TabIndex = 17;
@@ -253,7 +253,7 @@
             // chkAuxilioTransporte
             // 
             this.chkAuxilioTransporte.AutoSize = true;
-            this.chkAuxilioTransporte.Location = new System.Drawing.Point(45, 252);
+            this.chkAuxilioTransporte.Location = new System.Drawing.Point(37, 244);
             this.chkAuxilioTransporte.Name = "chkAuxilioTransporte";
             this.chkAuxilioTransporte.Size = new System.Drawing.Size(115, 17);
             this.chkAuxilioTransporte.TabIndex = 22;
@@ -281,7 +281,7 @@
             // cerrarToolStripMenuItem
             // 
             this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
-            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(106, 22);
             this.cerrarToolStripMenuItem.Text = "Cerrar";
             this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
             // 
@@ -289,7 +289,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1099, 546);
+            this.ClientSize = new System.Drawing.Size(1099, 618);
             this.ControlBox = false;
             this.Controls.Add(this.chkAuxilioTransporte);
             this.Controls.Add(this.btnCargar);
