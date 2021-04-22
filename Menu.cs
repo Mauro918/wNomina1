@@ -73,10 +73,11 @@ namespace wNomina1
                 Pension = Salariobasico * 0.16 ;
                 Nomina += Salariobasico + Extra;
 
-                MessageBox.Show("Nombre: " + txtNombre.Text + "\n" + "Apellido: " + txtApellido.Text + "\n" +
-                    "Documento: " + txtDocumento.Text + "\n" + "Cargo: " + cmbCargo.Text + "\n" + "Comision: " + Comision
-                    + "\n" + "Axilio de trasporte: " + Auxilio + "\n" + "Salud: " + Salud + "\n" + "Pension: "
-                    + Pension + "\n" + "Valor a pagar " + Nomina);
+                MessageBox.Show("Nombre:        \t$" + txtNombre.Text + "\n" + "Apellido:      \t$" + txtApellido.Text + "\n" +
+                    "Documento:           \t$" + txtDocumento.Text + "\n" + "Cargo:         \t$" + cmbCargo.Text + "\n" + "Comision:          \t$" + Comision
+                    + "\n" + "Axilio de trasporte:         \t$" + Auxilio + "\n" + "Salud:         \t$" + Salud + "\n" + "Pension:       \t$"
+                    + Pension + "\n" + "Valor a pagar        \t$" + Nomina);
+
             }
             catch (Exception x)
             {
@@ -111,10 +112,14 @@ namespace wNomina1
 
         private void txtSalario_TextChanged(object sender, EventArgs e)
         {
+
             double Salariobasico = 0;
+
             try
             {
                 Salariobasico = double.Parse(txtSalario.Text);
+
+
 
                 if (Salariobasico <= 902000 && Salariobasico > 0)
                 {
@@ -124,17 +129,22 @@ namespace wNomina1
                 }
                 else
                 {
-
+                    chkAuxilio.Checked = false;
                     chkAuxilio.Visible = false;
                     chkAuxilio.Enabled = false;
                 }
 
             }
-            catch 
+
+            catch
             {
-                txtSalario.Text = "";
+                chkAuxilio.Checked = false;
+                chkAuxilio.Visible = false;
+                chkAuxilio.Enabled = false;
                 Salariobasico = 0;
-                
+                txtSalario.Text = "";
+
+
             }
         }
 
@@ -156,94 +166,38 @@ namespace wNomina1
                 rdoOchocientoss.Enabled = true;
                 rdoMillon.Enabled = true;
             }
+
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            txtNombre.Clear();
-            txtApellido.Clear();
-            txtDocumento.Clear();
-            txtExtra.Clear();
-            txtSalario.Clear();
-            cmbCargo.Text = "";
-            chkAuxilio.Checked = false;
-            chkComision.Checked = false;
-            chkAuxilio.Visible = false;
-            chkAuxilio.Enabled = true;
+            try
+            {
 
+                txtNombre.Clear();
+                txtApellido.Clear();
+                txtDocumento.Clear();
+                txtExtra.Clear();
+                txtSalario.Clear();
+                cmbCargo.Text = "";
+                chkAuxilio.Checked = false;
+                chkComision.Checked = false;
+                chkAuxilio.Visible = false;
+                chkAuxilio.Enabled = true;
+
+            }
+            catch (Exception err)
+            {
+
+                MessageBox.Show(err.Message);
+
+            }
         }
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
-            #region[crear columnas]
-            DataGridViewTextBoxColumn col1 = new DataGridViewTextBoxColumn();
-            col1.HeaderText = "Nombre";
-            col1.Width = 200;
-            col1.ReadOnly = true;
-            dtgNomina.Columns.Add(col1);
-
-            DataGridViewTextBoxColumn col2 = new DataGridViewTextBoxColumn();
-            col2.HeaderText = "Apillido";
-            col2.Width = 200;
-            col2.ReadOnly = true;
-            dtgNomina.Columns.Add(col2);
-
-            DataGridViewTextBoxColumn col3 = new DataGridViewTextBoxColumn();
-            col3.HeaderText = "Documento";
-            col3.Width = 200;
-            col3.ReadOnly = true;
-            dtgNomina.Columns.Add(col3);
-
-            DataGridViewTextBoxColumn col4 = new DataGridViewTextBoxColumn();
-            col4.HeaderText = "Cargo";
-            col4.Width = 200;
-            col4.ReadOnly = true;
-            dtgNomina.Columns.Add(col4);
-
-            DataGridViewTextBoxColumn col5 = new DataGridViewTextBoxColumn();
-            col5.HeaderText = "Comiccion";
-            col5.Width = 200;
-            col5.ReadOnly = true;
-            dtgNomina.Columns.Add(col5);
-
-            DataGridViewTextBoxColumn col6 = new DataGridViewTextBoxColumn();
-            col6.HeaderText = "Axilio de trasporte";
-            col6.Width = 200;
-            col6.ReadOnly = true;
-            dtgNomina.Columns.Add(col6);
-
-            DataGridViewTextBoxColumn col7 = new DataGridViewTextBoxColumn();
-            col7.HeaderText = "Salud";
-            col7.Width = 200;
-            col7.ReadOnly = true;
-            dtgNomina.Columns.Add(col7);
-
-            DataGridViewTextBoxColumn col8 = new DataGridViewTextBoxColumn();
-            col8.HeaderText = "Pension";
-            col8.Width = 200;
-            col8.ReadOnly = true;
-            dtgNomina.Columns.Add(col8);
-
-            DataGridViewTextBoxColumn col9 = new DataGridViewTextBoxColumn();
-            col9.HeaderText = "Valor a pagar";
-            col9.Width = 200;
-            col9.ReadOnly = true;
-            dtgNomina.Columns.Add(col9);
-            #endregion
-
-            dtgNomina.Rows.Add();
-            dtgNomina[0, 0].Value = txtNombre.Text;
-            dtgNomina[1, 0].Value = txtApellido.Text;
-            dtgNomina[2, 0].Value = txtDocumento.Text;
-            dtgNomina[3, 0].Value = cmbCargo.Text;
-            dtgNomina[4, 0].Value = txtNombre.Text;
-            dtgNomina[7, 0].Value = txtNombre.Text; 
-            dtgNomina[5, 0].Value = txtNombre.Text;
-            dtgNomina[6, 0].Value = txtNombre.Text;
-            dtgNomina[8, 0].Value = txtNombre.Text;
-
+          
         }
 
-        
     }
 }

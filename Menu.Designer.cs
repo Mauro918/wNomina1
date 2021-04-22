@@ -62,7 +62,7 @@
             this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
-            this.lblNombre.UseWaitCursor = true;
+            this.lblNombre.UseWaitCursor = false;
             // 
             // lblDocumento
             // 
@@ -72,7 +72,7 @@
             this.lblDocumento.Size = new System.Drawing.Size(62, 13);
             this.lblDocumento.TabIndex = 1;
             this.lblDocumento.Text = "Documento";
-            this.lblDocumento.UseWaitCursor = true;
+            this.lblDocumento.UseWaitCursor = false;
             // 
             // lblSalariobasico
             // 
@@ -82,7 +82,7 @@
             this.lblSalariobasico.Size = new System.Drawing.Size(73, 13);
             this.lblSalariobasico.TabIndex = 2;
             this.lblSalariobasico.Text = "Salario basico";
-            this.lblSalariobasico.UseWaitCursor = true;
+            this.lblSalariobasico.UseWaitCursor = false;
             // 
             // lblApellido
             // 
@@ -92,7 +92,7 @@
             this.lblApellido.Size = new System.Drawing.Size(44, 13);
             this.lblApellido.TabIndex = 3;
             this.lblApellido.Text = "Apellido";
-            this.lblApellido.UseWaitCursor = true;
+            this.lblApellido.UseWaitCursor = false;
             // 
             // lblCargo
             // 
@@ -102,7 +102,7 @@
             this.lblCargo.Size = new System.Drawing.Size(35, 13);
             this.lblCargo.TabIndex = 4;
             this.lblCargo.Text = "Cargo";
-            this.lblCargo.UseWaitCursor = true;
+            this.lblCargo.UseWaitCursor = false;
             // 
             // lblExtra
             // 
@@ -112,7 +112,7 @@
             this.lblExtra.Size = new System.Drawing.Size(31, 13);
             this.lblExtra.TabIndex = 5;
             this.lblExtra.Text = "Extra";
-            this.lblExtra.UseWaitCursor = true;
+            this.lblExtra.UseWaitCursor = false;
             // 
             // txtNombre
             // 
@@ -120,7 +120,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 8;
-            this.txtNombre.UseWaitCursor = true;
+            this.txtNombre.UseWaitCursor = false;
             // 
             // txtDocumento
             // 
@@ -128,7 +128,7 @@
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(100, 20);
             this.txtDocumento.TabIndex = 9;
-            this.txtDocumento.UseWaitCursor = true;
+            this.txtDocumento.UseWaitCursor = false;
             // 
             // txtSalario
             // 
@@ -136,7 +136,7 @@
             this.txtSalario.Name = "txtSalario";
             this.txtSalario.Size = new System.Drawing.Size(100, 20);
             this.txtSalario.TabIndex = 10;
-            this.txtSalario.UseWaitCursor = true;
+            this.txtSalario.UseWaitCursor = false;
             this.txtSalario.TextChanged += new System.EventHandler(this.txtSalario_TextChanged);
             // 
             // txtApellido
@@ -145,7 +145,7 @@
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 11;
-            this.txtApellido.UseWaitCursor = true;
+            this.txtApellido.UseWaitCursor = false;
             // 
             // txtExtra
             // 
@@ -153,7 +153,7 @@
             this.txtExtra.Name = "txtExtra";
             this.txtExtra.Size = new System.Drawing.Size(100, 20);
             this.txtExtra.TabIndex = 13;
-            this.txtExtra.UseWaitCursor = true;
+            this.txtExtra.UseWaitCursor = false;
             // 
             // chkComision
             // 
@@ -166,7 +166,7 @@
             this.chkComision.TabIndex = 15;
             this.chkComision.Text = "Comision";
             this.chkComision.UseVisualStyleBackColor = true;
-            this.chkComision.UseWaitCursor = true;
+            this.chkComision.UseWaitCursor = false;
             this.chkComision.CheckedChanged += new System.EventHandler(this.chkComision_CheckedChanged);
             // 
             // cmbCargo
@@ -176,7 +176,7 @@
             this.cmbCargo.Name = "cmbCargo";
             this.cmbCargo.Size = new System.Drawing.Size(121, 21);
             this.cmbCargo.TabIndex = 16;
-            this.cmbCargo.UseWaitCursor = true;
+            this.cmbCargo.UseWaitCursor = false;
             // 
             // grbTotalvendido
             // 
@@ -189,7 +189,7 @@
             this.grbTotalvendido.TabIndex = 17;
             this.grbTotalvendido.TabStop = false;
             this.grbTotalvendido.Text = "Total vendido";
-            this.grbTotalvendido.UseWaitCursor = true;
+            this.grbTotalvendido.UseWaitCursor = false;
             // 
             // rdoMillon
             // 
@@ -201,7 +201,7 @@
             this.rdoMillon.TabStop = true;
             this.rdoMillon.Text = "1\'000.000";
             this.rdoMillon.UseVisualStyleBackColor = true;
-            this.rdoMillon.UseWaitCursor = true;
+            this.rdoMillon.UseWaitCursor = false;
             // 
             // rdoOchocientoss
             // 
@@ -213,7 +213,7 @@
             this.rdoOchocientoss.TabStop = true;
             this.rdoOchocientoss.Text = "800.000";
             this.rdoOchocientoss.UseVisualStyleBackColor = true;
-            this.rdoOchocientoss.UseWaitCursor = true;
+            this.rdoOchocientoss.UseWaitCursor = false;
             // 
             // rdoQuinientos
             // 
@@ -225,7 +225,7 @@
             this.rdoQuinientos.TabStop = true;
             this.rdoQuinientos.Text = "500.000";
             this.rdoQuinientos.UseVisualStyleBackColor = true;
-            this.rdoQuinientos.UseWaitCursor = true;
+            this.rdoQuinientos.UseWaitCursor = false;
             // 
             // btnNomina
             // 
@@ -235,7 +235,7 @@
             this.btnNomina.TabIndex = 18;
             this.btnNomina.Text = "Generar nomina";
             this.btnNomina.UseVisualStyleBackColor = true;
-            this.btnNomina.UseWaitCursor = true;
+            this.btnNomina.UseWaitCursor = false;
             this.btnNomina.Click += new System.EventHandler(this.btnNomina_Click);
             // 
             // btnLimpiar
@@ -246,7 +246,7 @@
             this.btnLimpiar.TabIndex = 19;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.UseWaitCursor = true;
+            this.btnLimpiar.UseWaitCursor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // dtgNomina
@@ -256,7 +256,7 @@
             this.dtgNomina.Name = "dtgNomina";
             this.dtgNomina.Size = new System.Drawing.Size(303, 123);
             this.dtgNomina.TabIndex = 20;
-            this.dtgNomina.UseWaitCursor = true;
+            this.dtgNomina.UseWaitCursor = false;
             // 
             // btnCargar
             // 
@@ -266,7 +266,7 @@
             this.btnCargar.TabIndex = 21;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
-            this.btnCargar.UseWaitCursor = true;
+            this.btnCargar.UseWaitCursor = false;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // chkAuxilio
@@ -278,13 +278,14 @@
             this.chkAuxilio.TabIndex = 22;
             this.chkAuxilio.Text = "Auxilio de trasporte";
             this.chkAuxilio.UseVisualStyleBackColor = true;
-            this.chkAuxilio.UseWaitCursor = true;
+            this.chkAuxilio.UseWaitCursor = false;
             // 
             // frmNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(819, 472);
+            this.ControlBox = false;
             this.Controls.Add(this.chkAuxilio);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.dtgNomina);
@@ -304,10 +305,9 @@
             this.Controls.Add(this.lblSalariobasico);
             this.Controls.Add(this.lblDocumento);
             this.Controls.Add(this.lblNombre);
-            this.DoubleBuffered = true;
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Name = "frmNomina";
             this.Text = "Nomina";
-            this.UseWaitCursor = true;
             this.Load += new System.EventHandler(this.frmNomina_Load);
             this.grbTotalvendido.ResumeLayout(false);
             this.grbTotalvendido.PerformLayout();
