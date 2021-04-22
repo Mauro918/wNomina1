@@ -25,25 +25,21 @@ namespace wNomina1
             {
                 Forma = new frmNomina();
                 Forma.FormClosed += new FormClosedEventHandler(Cerrarforma);
-                Forma.MdiParent = this;
                 Forma.Show();
+                this.Hide();
 
             }
             else 
             {
                 Forma.Activate();
-
             }
-
-
         }
 
 
 
         void Cerrarforma(object sender, FormClosedEventArgs e)
         {
-            Forma = null;
-        
+            Forma = null;        
         }
 
 
@@ -52,10 +48,21 @@ namespace wNomina1
             this.Close();
         }
 
+        public void reabrirFormulario()
+        {
+            this.Show();
+        }
+
         private void frmMenuPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult resultado = MessageBox.Show(" Realmente desea salir?", " Comfirmacion ",
             MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+
             e.Cancel = (resultado == DialogResult.No);
         }
     }

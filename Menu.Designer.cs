@@ -50,241 +50,246 @@
             this.dtgNomina = new System.Windows.Forms.DataGridView();
             this.btnCargar = new System.Windows.Forms.Button();
             this.chkAuxilio = new System.Windows.Forms.CheckBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grbTotalvendido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgNomina)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(42, 36);
+            this.lblNombre.Location = new System.Drawing.Point(34, 83);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
-            this.lblNombre.UseWaitCursor = false;
             // 
             // lblDocumento
             // 
             this.lblDocumento.AutoSize = true;
-            this.lblDocumento.Location = new System.Drawing.Point(45, 75);
+            this.lblDocumento.Location = new System.Drawing.Point(37, 122);
             this.lblDocumento.Name = "lblDocumento";
             this.lblDocumento.Size = new System.Drawing.Size(62, 13);
             this.lblDocumento.TabIndex = 1;
             this.lblDocumento.Text = "Documento";
-            this.lblDocumento.UseWaitCursor = false;
             // 
             // lblSalariobasico
             // 
             this.lblSalariobasico.AutoSize = true;
-            this.lblSalariobasico.Location = new System.Drawing.Point(45, 118);
+            this.lblSalariobasico.Location = new System.Drawing.Point(37, 165);
             this.lblSalariobasico.Name = "lblSalariobasico";
             this.lblSalariobasico.Size = new System.Drawing.Size(73, 13);
             this.lblSalariobasico.TabIndex = 2;
             this.lblSalariobasico.Text = "Salario basico";
-            this.lblSalariobasico.UseWaitCursor = false;
             // 
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(284, 33);
+            this.lblApellido.Location = new System.Drawing.Point(276, 80);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(44, 13);
             this.lblApellido.TabIndex = 3;
             this.lblApellido.Text = "Apellido";
-            this.lblApellido.UseWaitCursor = false;
             // 
             // lblCargo
             // 
             this.lblCargo.AutoSize = true;
-            this.lblCargo.Location = new System.Drawing.Point(284, 78);
+            this.lblCargo.Location = new System.Drawing.Point(276, 125);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(35, 13);
             this.lblCargo.TabIndex = 4;
             this.lblCargo.Text = "Cargo";
-            this.lblCargo.UseWaitCursor = false;
             // 
             // lblExtra
             // 
             this.lblExtra.AutoSize = true;
-            this.lblExtra.Location = new System.Drawing.Point(284, 118);
+            this.lblExtra.Location = new System.Drawing.Point(276, 165);
             this.lblExtra.Name = "lblExtra";
             this.lblExtra.Size = new System.Drawing.Size(31, 13);
             this.lblExtra.TabIndex = 5;
             this.lblExtra.Text = "Extra";
-            this.lblExtra.UseWaitCursor = false;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(128, 33);
+            this.txtNombre.Location = new System.Drawing.Point(120, 80);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 8;
-            this.txtNombre.UseWaitCursor = false;
             // 
             // txtDocumento
             // 
-            this.txtDocumento.Location = new System.Drawing.Point(128, 78);
+            this.txtDocumento.Location = new System.Drawing.Point(120, 119);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(100, 20);
             this.txtDocumento.TabIndex = 9;
-            this.txtDocumento.UseWaitCursor = false;
             // 
             // txtSalario
             // 
-            this.txtSalario.Location = new System.Drawing.Point(128, 115);
+            this.txtSalario.Location = new System.Drawing.Point(120, 162);
             this.txtSalario.Name = "txtSalario";
             this.txtSalario.Size = new System.Drawing.Size(100, 20);
             this.txtSalario.TabIndex = 10;
-            this.txtSalario.UseWaitCursor = false;
             this.txtSalario.TextChanged += new System.EventHandler(this.txtSalario_TextChanged);
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(340, 30);
+            this.txtApellido.Location = new System.Drawing.Point(332, 80);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 11;
-            this.txtApellido.UseWaitCursor = false;
             // 
             // txtExtra
             // 
-            this.txtExtra.Location = new System.Drawing.Point(340, 118);
+            this.txtExtra.Location = new System.Drawing.Point(332, 162);
             this.txtExtra.Name = "txtExtra";
             this.txtExtra.Size = new System.Drawing.Size(100, 20);
             this.txtExtra.TabIndex = 13;
-            this.txtExtra.UseWaitCursor = false;
             // 
             // chkComision
             // 
             this.chkComision.AutoSize = true;
-            this.chkComision.Checked = true;
-            this.chkComision.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkComision.Location = new System.Drawing.Point(48, 250);
+            this.chkComision.Location = new System.Drawing.Point(45, 340);
             this.chkComision.Name = "chkComision";
             this.chkComision.Size = new System.Drawing.Size(68, 17);
             this.chkComision.TabIndex = 15;
             this.chkComision.Text = "Comision";
             this.chkComision.UseVisualStyleBackColor = true;
-            this.chkComision.UseWaitCursor = false;
             this.chkComision.CheckedChanged += new System.EventHandler(this.chkComision_CheckedChanged);
             // 
             // cmbCargo
             // 
             this.cmbCargo.FormattingEnabled = true;
-            this.cmbCargo.Location = new System.Drawing.Point(340, 70);
+            this.cmbCargo.Location = new System.Drawing.Point(332, 122);
             this.cmbCargo.Name = "cmbCargo";
-            this.cmbCargo.Size = new System.Drawing.Size(121, 21);
+            this.cmbCargo.Size = new System.Drawing.Size(100, 21);
             this.cmbCargo.TabIndex = 16;
-            this.cmbCargo.UseWaitCursor = false;
             // 
             // grbTotalvendido
             // 
             this.grbTotalvendido.Controls.Add(this.rdoMillon);
             this.grbTotalvendido.Controls.Add(this.rdoOchocientoss);
             this.grbTotalvendido.Controls.Add(this.rdoQuinientos);
-            this.grbTotalvendido.Location = new System.Drawing.Point(211, 250);
+            this.grbTotalvendido.Location = new System.Drawing.Point(211, 340);
             this.grbTotalvendido.Name = "grbTotalvendido";
-            this.grbTotalvendido.Size = new System.Drawing.Size(200, 100);
+            this.grbTotalvendido.Size = new System.Drawing.Size(239, 134);
             this.grbTotalvendido.TabIndex = 17;
             this.grbTotalvendido.TabStop = false;
             this.grbTotalvendido.Text = "Total vendido";
-            this.grbTotalvendido.UseWaitCursor = false;
             // 
             // rdoMillon
             // 
             this.rdoMillon.AutoSize = true;
-            this.rdoMillon.Location = new System.Drawing.Point(16, 66);
+            this.rdoMillon.Location = new System.Drawing.Point(28, 89);
             this.rdoMillon.Name = "rdoMillon";
             this.rdoMillon.Size = new System.Drawing.Size(72, 17);
             this.rdoMillon.TabIndex = 18;
             this.rdoMillon.TabStop = true;
             this.rdoMillon.Text = "1\'000.000";
             this.rdoMillon.UseVisualStyleBackColor = true;
-            this.rdoMillon.UseWaitCursor = false;
             // 
             // rdoOchocientoss
             // 
             this.rdoOchocientoss.AutoSize = true;
-            this.rdoOchocientoss.Location = new System.Drawing.Point(16, 43);
+            this.rdoOchocientoss.Location = new System.Drawing.Point(28, 66);
             this.rdoOchocientoss.Name = "rdoOchocientoss";
             this.rdoOchocientoss.Size = new System.Drawing.Size(64, 17);
             this.rdoOchocientoss.TabIndex = 18;
             this.rdoOchocientoss.TabStop = true;
             this.rdoOchocientoss.Text = "800.000";
             this.rdoOchocientoss.UseVisualStyleBackColor = true;
-            this.rdoOchocientoss.UseWaitCursor = false;
             // 
             // rdoQuinientos
             // 
             this.rdoQuinientos.AutoSize = true;
-            this.rdoQuinientos.Location = new System.Drawing.Point(16, 20);
+            this.rdoQuinientos.Location = new System.Drawing.Point(28, 43);
             this.rdoQuinientos.Name = "rdoQuinientos";
             this.rdoQuinientos.Size = new System.Drawing.Size(64, 17);
             this.rdoQuinientos.TabIndex = 0;
             this.rdoQuinientos.TabStop = true;
             this.rdoQuinientos.Text = "500.000";
             this.rdoQuinientos.UseVisualStyleBackColor = true;
-            this.rdoQuinientos.UseWaitCursor = false;
             // 
             // btnNomina
             // 
-            this.btnNomina.Location = new System.Drawing.Point(432, 250);
+            this.btnNomina.Location = new System.Drawing.Point(557, 311);
             this.btnNomina.Name = "btnNomina";
-            this.btnNomina.Size = new System.Drawing.Size(121, 23);
+            this.btnNomina.Size = new System.Drawing.Size(215, 46);
             this.btnNomina.TabIndex = 18;
             this.btnNomina.Text = "Generar nomina";
             this.btnNomina.UseVisualStyleBackColor = true;
-            this.btnNomina.UseWaitCursor = false;
             this.btnNomina.Click += new System.EventHandler(this.btnNomina_Click);
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(432, 327);
+            this.btnLimpiar.Location = new System.Drawing.Point(557, 421);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(121, 23);
+            this.btnLimpiar.Size = new System.Drawing.Size(215, 46);
             this.btnLimpiar.TabIndex = 19;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.UseWaitCursor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // dtgNomina
             // 
             this.dtgNomina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgNomina.Location = new System.Drawing.Point(504, 30);
+            this.dtgNomina.Location = new System.Drawing.Point(481, 30);
             this.dtgNomina.Name = "dtgNomina";
-            this.dtgNomina.Size = new System.Drawing.Size(303, 123);
+            this.dtgNomina.Size = new System.Drawing.Size(593, 214);
             this.dtgNomina.TabIndex = 20;
-            this.dtgNomina.UseWaitCursor = false;
             // 
             // btnCargar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(604, 287);
+            this.btnCargar.Location = new System.Drawing.Point(852, 368);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(75, 23);
+            this.btnCargar.Size = new System.Drawing.Size(169, 46);
             this.btnCargar.TabIndex = 21;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
-            this.btnCargar.UseWaitCursor = false;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // chkAuxilio
             // 
             this.chkAuxilio.AutoSize = true;
-            this.chkAuxilio.Location = new System.Drawing.Point(45, 200);
+            this.chkAuxilio.Location = new System.Drawing.Point(45, 252);
             this.chkAuxilio.Name = "chkAuxilio";
             this.chkAuxilio.Size = new System.Drawing.Size(115, 17);
             this.chkAuxilio.TabIndex = 22;
             this.chkAuxilio.Text = "Auxilio de trasporte";
             this.chkAuxilio.UseVisualStyleBackColor = true;
-            this.chkAuxilio.UseWaitCursor = false;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.archivoToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1099, 24);
+            this.menuStrip1.TabIndex = 23;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // archivoToolStripMenuItem
+            // 
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cerrarToolStripMenuItem});
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Text = "Archivo";
+            // 
+            // cerrarToolStripMenuItem
+            // 
+            this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
+            this.cerrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarToolStripMenuItem.Text = "Cerrar";
+            this.cerrarToolStripMenuItem.Click += new System.EventHandler(this.cerrarToolStripMenuItem_Click);
             // 
             // frmNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 472);
+            this.ClientSize = new System.Drawing.Size(1099, 546);
             this.ControlBox = false;
             this.Controls.Add(this.chkAuxilio);
             this.Controls.Add(this.btnCargar);
@@ -305,13 +310,18 @@
             this.Controls.Add(this.lblSalariobasico);
             this.Controls.Add(this.lblDocumento);
             this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.menuStrip1);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmNomina";
             this.Text = "Nomina";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMenuPrincipal_FormClosing);
             this.Load += new System.EventHandler(this.frmNomina_Load);
             this.grbTotalvendido.ResumeLayout(false);
             this.grbTotalvendido.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgNomina)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,6 +351,9 @@
         private System.Windows.Forms.DataGridView dtgNomina;
         private System.Windows.Forms.Button btnCargar;
         private System.Windows.Forms.CheckBox chkAuxilio;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cerrarToolStripMenuItem;
     }
 }
 
